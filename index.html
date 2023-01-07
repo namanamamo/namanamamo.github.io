@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>テスト</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <script src="javas.js"></script>
+    </head>
+    <body>
+        <div id="loading">
+            <figure class="loading-logo">
+              <img src="logo.png" alt="">
+            </figure>
+        </div>    
+          <div id="page">
+            <script>
+                //ローディングロゴエリアとウインドウの高さを取得
+                let loadlogo = document.querySelector('.loading-logo'),
+                    winH = window.innerHeight;
+              
+                //スマホでアドレスバーの分ロゴの位置がずれるので高さを調整
+                loadlogo.style.height = winH + 'px';
+              
+                //ページ読み込み完了でローディング画面を非表示
+                window.addEventListener('load', stopload);
+              
+                //10秒経過で強制的にローディング画面を非表示
+                setTimeout('stopload()',10000);
+              
+                //ローディング画面を非表示にする処理
+                function stopload() {
+                  //ローディング画面とページを取得
+                  let loader = document.querySelector('#loading'),
+                      page = document.querySelector('#page');
+              
+                  //ローディング画面とページにクラスを追加
+                  page.classList.add('is-loaded');
+                  loader.classList.add('is-loaded');
+                }
+            </script>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        <h1>helloworld</h1>
+        <h2>test</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <h2>web page</h2>
+        <div class="button_line001">
+            <a href="https://www.google.co.jp">Google</a>
+        </div>
+          <div class="button_line001">
+            <a href="https://www.apple.com/jp/">Apple</a>
+        </div>
+        <h2>picture</h2>
+        <br>
+        <img src="Unknown.jpeg">
+        <br>
+        <h2>HTMLとは</h2>
+        <h4>HyperText Markup Languageの略</h4>
+        <a href="https://ja.wikipedia.org/wiki/ハイパーテキスト">ハイパーテキスト</a>
+        <h4 style="display: inline;">を記述するためのマークアップ言語の1つで、プログラミング言語ではない。=wiki</h4>
+    </div>
+    </body>
+</html>
